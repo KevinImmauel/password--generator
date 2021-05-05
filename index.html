@@ -11,52 +11,60 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Password Generator</h1>
-        <div class="result-container">
-            <span id="result"></span>
-            <button id="copy">Copy</button>
-        </div>
+    <div class="main_container">
 
-        <div class="length_container">
-            <label class="length_text">Length of your Password</label>
-            <div class="length_result">
-                <input class="slider" type="range" id="length" min="4" max="20" value="10" oninput="this.nextElementSibling.value = this.value">
-                <output>10</output>
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="result-container">
+                <span id="result"></span>
+                <button id="copy">Copy</button>
             </div>
-        </div>
 
-        <div class="length_container">
-            <label class="num_text">Include Numbers</label>
-            <div>
-                <input type="checkbox" id="nums">
+            <div class="length_container">
+                <label class="length_text">Length of your Password</label>
+                <div class="length_result">
+                    <input class="slider" type="range" id="length" min="4" max="20" value="10" oninput="this.nextElementSibling.value = this.value">
+                    <output>10</output>
+                </div>
             </div>
-        </div>
 
-        <div class="length_container">
-            <label class="smol_text">Include Small Letters</label>
-            <div>
-                <input type="checkbox" id="smol">
+            <div class="length_container">
+                <label class="num_text">Include Numbers</label>
+                <div>
+                    <input type="checkbox" id="nums">
+                </div>
             </div>
-        </div>
 
-        <div class="length_container">
-            <label class="bigg_text">Include Capital Letters</label>
-            <div>
-                <input type="checkbox" id="bigg">
+            <div class="length_container">
+                <label class="smol_text">Include Small Letters</label>
+                <div>
+                    <input type="checkbox" id="smol">
+                </div>
             </div>
-        </div>
 
-        <div class="length_container">
-            <label class="sym_text">Include Symbols</label>
-            <div>
-                <input type="checkbox" id="symbols">
+            <div class="length_container">
+                <label class="bigg_text">Include Capital Letters</label>
+                <div>
+                    <input type="checkbox" id="bigg">
+                </div>
             </div>
-        </div>
 
-        <button class="length_container" id="generate" type="submit">Generate Password</button>
+            <div class="length_container">
+                <label class="sym_text">Include Symbols</label>
+                <div>
+                    <input type="checkbox" id="symbols">
+                </div>
+            </div>
+
+            <button class="length_container" id="generate" type="submit">Generate Password</button>
+
+        </div>
 
     </div>
+
+    <a href="https://kevin-immanuel.web.app/">
+        <div class="name">#Made By Kevin Immanuel</div>
+    </a>
 
     <script src="main.js"></script>
 
