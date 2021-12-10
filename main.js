@@ -40,42 +40,19 @@ function rando(string) {
     return string.charAt(Math.floor(Math.random() * string.length));
 };
 
+function oneZero(optCheck, func){
+    if (optCheck == true){
+        return func
+    } else {
+        return ""
+    }
+}
+
 function generator(lengthofpass) {
     var genratedPass = '';
 
     for (var i = 0; i <= lengthofpass; i++) {
-        //genratedPass += rando(numbers) + rando(symbols) + rando(capLetterString) + rando(smolLettersString);
-        if (symbolSp.checked == true && numSp.checked == true && smolSp.checked == true && biggSp.checked == true) {
-            genratedPass += rando(numbers) + rando(symbols) + rando(capLetterString) + rando(smolLettersString);
-        } else if (symbolSp.checked == true && numSp.checked == true && smolSp.checked == true && biggSp.checked == false) {
-            genratedPass += rando(numbers) + rando(symbols) + rando(smolLettersString);
-        } else if (symbolSp.checked == true && numSp.checked == true && smolSp.checked == false && biggSp.checked == false) {
-            genratedPass += rando(numbers) + rando(symbols);
-        } else if (symbolSp.checked == true && numSp.checked == false && smolSp.checked == false && biggSp.checked == false) {
-            genratedPass += rando(symbols);
-        } else if (symbolSp.checked == false && numSp.checked == true && smolSp.checked == true && biggSp.checked == true) {
-            genratedPass += rando(numbers) + rando(smolLettersString) + rando(capLetterString);
-        } else if (symbolSp.checked == false && numSp.checked == false && smolSp.checked == true && biggSp.checked == true) {
-            genratedPass += rando(smolLettersString) + rando(capLetterString);
-        } else if (symbolSp.checked == false && numSp.checked == false && smolSp.checked == false && biggSp.checked == true) {
-            genratedPass += rando(capLetterString);
-        } else if (symbolSp.checked == true && numSp.checked == false && smolSp.checked == false && biggSp.checked == true) {
-            genratedPass += rando(symbols) + rando(capLetterString);
-        } else if (symbolSp.checked == false && numSp.checked == true && smolSp.checked == true && biggSp.checked == false) {
-            genratedPass += rando(numbers) + rando(smolLettersString);
-        } else if (symbolSp.checked == true && numSp.checked == false && smolSp.checked == true && biggSp.checked == false) {
-            genratedPass += rando(symbols) + rando(smolLettersString);
-        } else if (symbolSp.checked == false && numSp.checked == true && smolSp.checked == false && biggSp.checked == true) {
-            genratedPass += rando(numbers) + rando(capLetterString);
-        } else if (symbolSp.checked == false && numSp.checked == true && smolSp.checked == false && biggSp.checked == false) {
-            genratedPass += rando(numbers);
-        } else if (symbolSp.checked == false && numSp.checked == false && smolSp.checked == true && biggSp.checked == false) {
-            genratedPass += rando(smolLettersString);
-        } else if (symbolSp.checked == true && numSp.checked == false && smolSp.checked == true && biggSp.checked == true) {
-            genratedPass += rando(symbols) + rando(capLetterString) + rando(smolLettersString);
-        } else if (symbolSp.checked == true && numSp.checked == true && smolSp.checked == false && biggSp.checked == true) {
-            genratedPass += rando(numbers) + rando(symbols) + rando(capLetterString);
-        }
+        genratedPass += oneZero(symbolSp.checked, rando(symbols)) + oneZero(numSp.checked, rando(numbers)) + oneZero(smolSp.checked, rando(smolLettersString)) + oneZero(biggSp.checked, rando(capLetterString))
     };
 
     var finalPass = genratedPass;
