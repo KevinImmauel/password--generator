@@ -55,7 +55,5 @@ function generator(lengthofpass) {
         genratedPass += oneZero(symbolSp.checked, rando(symbols)) + oneZero(numSp.checked, rando(numbers)) + oneZero(smolSp.checked, rando(smolLettersString)) + oneZero(biggSp.checked, rando(capLetterString))
     };
 
-    var finalPass = genratedPass;
-
-    return finalPass;
+    return genratedPass;
 }

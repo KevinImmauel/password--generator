@@ -30,7 +30,7 @@ h1 {
     height: 650px;
     width: 27.5rem;
     border-radius: 10px;
-    background: #1d1f21;
+    background: #1e1f20;
     box-shadow: 50px 50px 100px #0c0c0d, -50px -50px 100px #2e3235;
 }
 
@@ -82,10 +82,6 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.result-container>button:hover {
-    box-shadow: 28px 28px 56px #141516, -28px -28px 56px #26292c;
-}
-
 .length_container {
     width: 90%;
     height: 4rem;
@@ -118,10 +114,6 @@ button.length_container {
     color: #eeeeee;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-button.length_container:hover {
-    box-shadow: 50px 50px 100px #0c0c0d, -50px -50px 100px #2e3235;
 }
 
 input[type="checkbox"] {
@@ -211,13 +203,4 @@ input[type="checkbox"]:checked:after {
         align-items: center;
         justify-content: center;
     }
-}
-
-.name {
-    position: absolute;
-    background-color: #000;
-    border-radius: 5px 0 0 0;
-    padding: 5px;
-    bottom: 0;
-    right: 0;
 }
